@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Minh Khôi | Backend Developer</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        apple: {
+                            bg: '#F5F5F7',
+                            card: '#FFFFFF',
+                            textPrimary: '#1D1D1F',
+                            textSecondary: '#86868B',
+                            accent: '#0066CC',
+                            accentHover: '#005bb5',
+                            border: '#E5E5EA'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Tùy chỉnh thanh cuộn và màu bôi đen văn bản */
+        ::selection {
+            background-color: #0066CC;
+            color: white;
+        }
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Hiệu ứng trễ cho các phần tử */
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+    </style>
+</head>
+<body class="bg-apple-bg text-apple-textPrimary font-sans">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full bg-apple-bg/80 backdrop-blur-md border-b border-apple-border z-50 transition-all duration-300">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-apple-textPrimary hover:opacity-70 transition-opacity">
+                TMK.
+            </a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-apple-textSecondary">
+                <a href="#about" class="hover:text-apple-textPrimary transition-colors">Giới thiệu</a>
+                <a href="#skills" class="hover:text-apple-textPrimary transition-colors">Kỹ năng</a>
+                <a href="#experience" class="hover:text-apple-textPrimary transition-colors">Kinh nghiệm</a>
+                <a href="#projects" class="hover:text-apple-textPrimary transition-colors">Dự án</a>
+                <a href="#education" class="hover:text-apple-textPrimary transition-colors">Học vấn</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="px-4 py-2 bg-apple-textPrimary text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">
+                    Liên hệ
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-12">
+        
+        <!-- Hero Section -->
+        <section id="about" class="max-w-4xl mx-auto px-6 py-20 text-center opacity-0 animate-fade-in-up">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-apple-textPrimary mb-6 leading-tight">
+                Trần Minh Khôi
+            </h1>
+            <p class="text-xl md:text-2xl text-apple-textSecondary font-medium mb-6 max-w-2xl mx-auto leading-relaxed">
+                Fresher Backend Developer
+            </p>
+            <p class="text-base text-apple-textSecondary mb-10 max-w-3xl mx-auto leading-relaxed">
+                Backend Developer với 4 tháng kinh nghiệm thực tế trong phát triển backend. Có kinh nghiệm xây dựng RESTful APIs, tối ưu cơ sở dữ liệu PostgreSQL, làm việc với Redis, Docker và Git. Luôn hướng đến việc xây dựng các hệ thống ổn định, bảo trì dễ dàng và có khả năng mở rộng.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#projects" class="w-full sm:w-auto px-8 py-3.5 bg-apple-accent text-white rounded-full font-medium hover:bg-apple-accentHover transition-colors flex items-center justify-center gap-2">
+                    Xem Dự án
+                    <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                </a>
+                <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 bg-white border border-apple-border text-apple-textPrimary rounded-full font-medium hover:bg-gray-50 transition-colors flex items-center justify-center gap-2">
+                    Liên hệ ngay
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="max-w-5xl mx-auto px-6 py-20 opacity-0 animate-fade-in-up delay-100">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight mb-4">Kỹ năng cốt lõi</h2>
+                <p class="text-apple-textSecondary">Hệ sinh thái công nghệ và tư duy kiến trúc hệ thống.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-apple-card p-8 rounded-3xl shadow-sm border border-gray-100/50 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-gray-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="code-2" class="w-6 h-6 text-apple-textPrimary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Ngôn ngữ & Framework</h3>
+                    <p class="text-apple-textSecondary leading-relaxed">
+                        Thành thạo <span class="font-medium text-apple-textPrimary">Java, PHP, JavaScript, C#</span>. 
+                        Xây dựng ứng dụng mạnh mẽ với <span class="font-medium text-apple-textPrimary">Spring Boot, Laravel, React</span>.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-apple-card p-8 rounded-3xl shadow-sm border border-gray-100/50 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-gray-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="database" class="w-6 h-6 text-apple-textPrimary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Cơ sở dữ liệu & Caching</h3>
+                    <p class="text-apple-textSecondary leading-relaxed">
+                        Thiết kế, tối ưu hóa truy vấn với <span class="font-medium text-apple-textPrimary">PostgreSQL, SQL Server, MySQL, MongoDB</span>. 
+                        Tăng tốc hiệu năng bằng <span class="font-medium text-apple-textPrimary">Redis</span>.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-apple-card p-8 rounded-3xl shadow-sm border border-gray-100/50 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-gray-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="server" class="w-6 h-6 text-apple-textPrimary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Kiến trúc & DevOps</h3>
+                    <p class="text-apple-textSecondary leading-relaxed">
+                        Phát triển <span class="font-medium text-apple-textPrimary">RESTful APIs, Clean Architecture</span>. 
+                        Đóng gói ứng dụng với <span class="font-medium text-apple-textPrimary">Docker</span>, bảo mật <span class="font-medium text-apple-textPrimary">JWT Authentication</span>.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-apple-card p-8 rounded-3xl shadow-sm border border-gray-100/50 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-gray-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="workflow" class="w-6 h-6 text-apple-textPrimary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Quy trình làm việc</h3>
+                    <p class="text-apple-textSecondary leading-relaxed">
+                        Thành thạo quy trình Agile/Scrum. Quản lý mã nguồn với Git/GitHub, thiết kế tài liệu API qua Postman/Swagger.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="max-w-4xl mx-auto px-6 py-20 opacity-0 animate-fade-in-up delay-200">
+            <h2 class="text-3xl font-bold tracking-tight mb-10">Kinh nghiệm thực chiến</h2>
+            
+            <div class="bg-apple-card rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100/50">
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-apple-textPrimary">Backend Developer Intern</h3>
+                        <p class="text-lg text-apple-accent font-medium mt-1">Công ty TNHH TM DV XNK Bảo Kim</p>
+                    </div>
+                    <div class="inline-flex items-center px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-apple-textSecondary">
+                        05/2025 – 09/2025
+                    </div>
+                </div>
+                
+                <p class="text-apple-textSecondary mb-6 font-medium">
+                    Dự án: Hệ thống Quản lý Đào tạo Nội bộ (Course Management System)
+                </p>
+
+                <ul class="space-y-4 text-apple-textSecondary leading-relaxed">
+                    <li class="flex items-start">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-apple-accent mt-1 mr-3 flex-shrink-0"></i>
+                        <span><strong class="text-apple-textPrimary">Tối ưu hiệu năng:</strong> Giảm khoảng 30% thời gian phản hồi API bằng cách phân tích và thiết lập hệ thống Index, tối ưu hóa hơn 15 truy vấn phức tạp trên PostgreSQL.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-apple-accent mt-1 mr-3 flex-shrink-0"></i>
+                        <span><strong class="text-apple-textPrimary">Phát triển API & Module:</strong> Xây dựng hơn 20 RESTful API và phát triển 10+ module quản trị trực quan bằng Laravel, Filament và Livewire.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-apple-accent mt-1 mr-3 flex-shrink-0"></i>
+                        <span><strong class="text-apple-textPrimary">Tự động hóa:</strong> Xây dựng hệ thống Seeder tạo hơn 2.000 bản ghi dữ liệu mẫu, hỗ trợ đội ngũ rút ngắn đáng kể thời gian kiểm thử và demo hệ thống.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-apple-accent mt-1 mr-3 flex-shrink-0"></i>
+                        <span><strong class="text-apple-textPrimary">Quy trình Agile:</strong> Tham gia tích cực vào Sprint Planning, Daily Stand-ups, Sprint Review và Retrospective cùng đội phát triển.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="max-w-6xl mx-auto px-6 py-20 opacity-0 animate-fade-in-up delay-300">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight mb-4">Dự án tiêu biểu</h2>
+                <p class="text-apple-textSecondary">Những hệ thống tôi đã thiết kế, lập trình và điều phối quy trình.</p>
+            </div>
+
+            <!-- Grid 2x2 cho 4 dự án hoàn hảo -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Project 1: Real-Time Chat Platform -->
+                <div class="group bg-apple-card rounded-3xl p-8 border border-gray-100/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-gray-200/50 flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-blue-50 text-apple-accent rounded-2xl flex items-center justify-center">
+                            <i data-lucide="message-square" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-gray-100 text-apple-textSecondary rounded-full">Full Stack (Cá nhân)</span>
+                    </div>
+                    <div class="mb-1 text-xs font-medium text-apple-textSecondary">Tháng 12/2025 – Tháng 01/2026</div>
+                    <h3 class="text-xl font-bold text-apple-textPrimary mb-3">Real-Time Chat Platform</h3>
+                    
+                    <ul class="text-apple-textSecondary text-sm mb-6 flex-grow leading-relaxed list-disc pl-4 space-y-2 marker:text-gray-400">
+                        <li>Xây dựng hệ thống <strong>RESTful API</strong> & bảo mật với Spring Security, JWT Authentication.</li>
+                        <li>Tích hợp <strong>Socket.IO</strong> để thiết lập kết nối hai chiều thời gian thực đồng bộ dữ liệu.</li>
+                        <li>Phát triển giao diện React.js (Vite), tách biệt logic khỏi UI bằng <strong>Zustand</strong>.</li>
+                        <li>Bảo vệ hệ thống với <strong>Arcjet</strong> (Rate Limiting, Bot Protection) & lưu trữ bằng Cloudinary.</li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-100 rounded-full text-apple-textPrimary">Spring Boot</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-100 rounded-full text-apple-textPrimary">React</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-100 rounded-full text-apple-textPrimary">Socket.IO</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-100 rounded-full text-apple-textPrimary">Arcjet</span>
+                    </div>
+                    <div class="flex items-center gap-4 mt-auto border-t border-gray-50 pt-4">
+                        <a href="https://github.com/minhkhoiv12/Chat_App" target="_blank" class="inline-flex items-center text-sm font-semibold text-apple-accent hover:text-apple-accentHover transition-colors">
+                            <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                            Source Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Online Shopping System -->
+                <div class="group bg-apple-card rounded-3xl p-8 border border-gray-100/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-gray-200/50 flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center">
+                            <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-gray-100 text-apple-textSecondary rounded-full">Backend (Cá nhân)</span>
+                    </div>
+                    <div class="mb-1 text-xs font-medium text-apple-textSecondary">Tháng 03/2026</div>
+                    <h3 class="text-xl font-bold text-apple-textPrimary mb-3">Online Shopping System</h3>
+                    
+                    <ul class="text-apple-textSecondary text-sm mb-6 flex-grow leading-relaxed list-disc pl-4 space-y-2 marker:text-gray-400">
+                        <li>Áp dụng <strong>Clean Architecture</strong> tách biệt Business Logic và nâng cao khả năng bảo trì.</li>
+                        <li>Phát triển RESTful API cho quản lý User, Product, Order và Payment bảo mật.</li>
+                        <li>Triển khai <strong>Redis Cache</strong> cho dữ liệu truy cập thường xuyên, giảm tải tối đa cho Database.</li>
+                        <li>Tích hợp cổng thanh toán <strong>Stripe Payment Gateway</strong> & Docker hóa ứng dụng để triển khai.</li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-100 rounded-full text-apple-textPrimary">Spring Boot</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-100 rounded-full text-apple-textPrimary">PostgreSQL</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-100 rounded-full text-apple-textPrimary">Redis</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-100 rounded-full text-apple-textPrimary">Docker</span>
+                    </div>
+                    <div class="flex items-center gap-4 mt-auto border-t border-gray-50 pt-4">
+                        <a href="https://github.com/minhkhoiv12/thuong-mai-dien-tu" target="_blank" class="inline-flex items-center text-sm font-semibold text-apple-accent hover:text-apple-accentHover transition-colors">
+                            <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                            Source Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Video Player App -->
+                <div class="group bg-apple-card rounded-3xl p-8 border border-gray-100/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-gray-200/50 flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center">
+                            <i data-lucide="play-square" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-gray-100 text-apple-textSecondary rounded-full">Android App (Nhóm 5)</span>
+                    </div>
+                    <div class="mb-1 text-xs font-medium text-apple-textSecondary">Tháng 05/2024</div>
+                    <h3 class="text-xl font-bold text-apple-textPrimary mb-3">Video Player App</h3>
+                    
+                    <ul class="text-apple-textSecondary text-sm mb-6 flex-grow leading-relaxed list-disc pl-4 space-y-2 marker:text-gray-400">
+                        <li>Tích hợp trình phát <strong>ExoPlayer</strong> xử lý phát video cục bộ hiệu suất cao, mượt mà.</li>
+                        <li>Thiết kế hệ thống <strong>Gesture-based controls</strong> điều chỉnh nhanh âm lượng & độ sáng màn hình.</li>
+                        <li>Xây dựng đầy đủ cụm phím điều khiển phát lại, tua nhanh, tốc độ và xoay khung hình.</li>
+                        <li>Phát triển module quản lý thư viện video: cho phép tìm kiếm, sắp xếp, đổi tên và xóa file.</li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-100 rounded-full text-apple-textPrimary">Java</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-100 rounded-full text-apple-textPrimary">Android SDK</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-100 rounded-full text-apple-textPrimary">ExoPlayer</span>
+                    </div>
+                    <div class="flex items-center gap-4 mt-auto border-t border-gray-50 pt-4">
+                        <a href="https://github.com/Hientrietman/PreludePlayer/tree/SpalshScreen" target="_blank" class="inline-flex items-center text-sm font-semibold text-apple-accent hover:text-apple-accentHover transition-colors">
+                            <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 text-apple-textPrimary">
+                            </svg>
+                            Source Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Student Management System (MỚI) -->
+                <div class="group bg-apple-card rounded-3xl p-8 border border-gray-100/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-gray-200/50 flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-gray-100 text-apple-textSecondary rounded-full">Product Owner (Nhóm 7)</span>
+                    </div>
+                    <div class="mb-1 text-xs font-medium text-apple-textSecondary">Tháng 03/2024</div>
+                    <h3 class="text-xl font-bold text-apple-textPrimary mb-3">Student Management System</h3>
+                    
+                    <ul class="text-apple-textSecondary text-sm mb-6 flex-grow leading-relaxed list-disc pl-4 space-y-2 marker:text-gray-400">
+                        <li>Đảm nhận vai trò <strong>Product Owner</strong> điều phối 7 thành viên, lập kế hoạch Sprint và thiết lập Product Backlog.</li>
+                        <li>Tổ chức các cuộc họp Scrum định kỳ bao gồm Sprint Planning, Daily Meeting, Sprint Review và Retrospective.</li>
+                        <li>Theo dõi, kiểm soát và tối ưu tiến độ thực hiện nhiệm vụ của các thành viên thông qua phần mềm <strong>Jira</strong>.</li>
+                        <li>Trực tiếp tham gia đóng góp xây dựng các module nghiệp vụ quản lý sinh viên và khóa học bằng WinForms.</li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-100 rounded-full text-apple-textPrimary">C#</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-100 rounded-full text-apple-textPrimary">SQL Server</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-100 rounded-full text-apple-textPrimary">Agile / Scrum</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-gray-100 rounded-full text-apple-textPrimary">Jira</span>
+                    </div>
+                    <div class="flex items-center gap-4 mt-auto border-t border-gray-50 pt-4">
+                        <a href="https://github.com/minhkhoiv12/QLSV-Prelude" target="_blank" class="inline-flex items-center text-sm font-semibold text-apple-accent hover:text-apple-accentHover transition-colors">
+                            <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                            Source Code
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="max-w-4xl mx-auto px-6 py-10 opacity-0 animate-fade-in-up delay-400">
+            <h2 class="text-3xl font-bold tracking-tight mb-8 text-center">Giáo dục & Chứng chỉ</h2>
+            
+            <div class="bg-apple-card rounded-3xl p-8 shadow-sm border border-gray-100/50 space-y-6">
+                <!-- Education Item -->
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-100 pb-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-apple-textPrimary">Trường Đại học Sư phạm TP.HCM</h3>
+                        <p class="text-apple-textSecondary font-medium mt-1">Tốt nghiệp ngành Kỹ thuật Phần mềm</p>
+                        <p class="text-apple-accent text-sm font-medium mt-1">Excellent Academic Performance</p>
+                    </div>
+                    <div class="inline-flex items-center px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-apple-textSecondary whitespace-nowrap">
+                        GPA: 3.28/4.0
+                    </div>
+                </div>
+
+                <!-- Certification Item (Bấm vào để xác minh) -->
+                <a href="https://www.coursera.org/account/accomplishments/verify/JULV2J8EEDMY" target="_blank" class="flex flex-col md:flex-row md:items-center justify-between gap-4 pt-2 group block hover:opacity-85 transition-opacity">
+                    <div>
+                        <div class="flex items-center gap-1.5">
+                            <h3 class="text-xl font-semibold text-apple-textPrimary group-hover:text-apple-accent transition-colors">Agile with Atlassian Jira</h3>
+                            <i data-lucide="external-link" class="w-4 h-4 text-apple-textSecondary group-hover:text-apple-accent transition-colors"></i>
+                        </div>
+                        <p class="text-apple-textSecondary font-medium mt-1">Chứng chỉ quản lý quy trình phần mềm (Coursera Verified)</p>
+                    </div>
+                    <div class="inline-flex items-center px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-apple-textSecondary whitespace-nowrap">
+                        2024
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer & Contact -->
+    <footer id="contact" class="bg-white border-t border-apple-border pt-16 pb-12">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-apple-textPrimary mb-6">Sẵn sàng hợp tác?</h2>
+            <p class="text-apple-textSecondary mb-10 max-w-xl mx-auto">
+                Tôi luôn tìm kiếm những cơ hội và thách thức mới trong việc thiết kế và vận hành hệ thống phần mềm. Đừng ngần ngại liên hệ!
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+                <a href="mailto:tkhoi1125@gmail.com" class="flex items-center gap-3 px-6 py-4 bg-apple-bg rounded-2xl hover:bg-gray-100 transition-colors">
+                    <i data-lucide="mail" class="w-5 h-5 text-apple-textPrimary"></i>
+                    <span class="font-medium text-apple-textPrimary">tkhoi1125@gmail.com</span>
+                </a>
+                <a href="tel:0971016905" class="flex items-center gap-3 px-6 py-4 bg-apple-bg rounded-2xl hover:bg-gray-100 transition-colors">
+                    <i data-lucide="phone" class="w-5 h-5 text-apple-textPrimary"></i>
+                    <span class="font-medium text-apple-textPrimary">0971 016 905</span>
+                </a>
+            </div>
+
+            <!-- Social Links (Centered & Redesigned with Pure SVG to ensure perfect rendering) -->
+            <div class="flex justify-center border-t border-apple-border pt-8">
+                <div class="flex items-center gap-6">
+                    <!-- GitHub SVG -->
+                    <a href="https://github.com/minhkhoiv12" target="_blank" class="w-12 h-12 rounded-full bg-apple-bg flex items-center justify-center hover:bg-gray-200 hover:scale-110 transition-all text-apple-textPrimary shadow-sm" title="GitHub">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <!-- LinkedIn SVG -->
+                    <a href="https://www.linkedin.com/in/khoi-minh-tran-017977352" target="_blank" class="w-12 h-12 rounded-full bg-apple-bg flex items-center justify-center hover:bg-gray-200 hover:scale-110 transition-all text-apple-accent shadow-sm" title="LinkedIn">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Icons -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
